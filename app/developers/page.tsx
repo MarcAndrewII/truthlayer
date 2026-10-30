@@ -1,0 +1,2 @@
+export const dynamic='force-dynamic';
+import {Gate} from '@/components/gate';import {Keys} from '@/components/keys';import Link from 'next/link';export default function Page(){return <Gate><section className="page stack"><div><div className="eyebrow">Developer workspace</div><h1>Your access to the record.</h1><p>Manage API keys and track authenticated request counts.</p></div><Link href="/docs" className="accent">API reference and query tester →</Link><Keys/></section></Gate>}

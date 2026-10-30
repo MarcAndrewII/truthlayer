@@ -1,0 +1,1 @@
+import {Gate} from '@/components/gate';import {PrivateRecord} from '@/components/private-record';import {identity} from '@/lib/db';export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;let reviewer=false;try{reviewer=(await identity()).reviewer}catch{}return <Gate><PrivateRecord id={id} reviewer={reviewer}/></Gate>}

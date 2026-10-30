@@ -1,0 +1,1 @@
+'use client';export default function ErrorPage({reset}:{reset:()=>void}){return <div className="page stack"><h1>Something interrupted this request.</h1><p>Your existing records are unchanged. Try loading the page again.</p><button className="btn" onClick={reset}>Retry</button></div>}

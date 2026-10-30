@@ -1,0 +1,2 @@
+import {Gate} from '@/components/gate';import {Submission} from '@/components/submission';
+export default async function Page({searchParams}:{searchParams:Promise<{id?:string}>}){const {id}=await searchParams;return <Gate><section className="page"><div className="eyebrow">Start with the evidence</div><h1>Challenge a claim.</h1><p className="intro">One factual proposition. A clear correction. A traceable record.</p><Submission id={id}/></section></Gate>}

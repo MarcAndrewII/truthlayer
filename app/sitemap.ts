@@ -1,0 +1,2 @@
+export const dynamic='force-dynamic';
+import type {MetadataRoute} from 'next';import {configured,adminDb} from '@/lib/db';export default async function sitemap():Promise<MetadataRoute.Sitemap>{const base=process.env.APP_URL||'http://localhost:3000';const pages=['','/claims','/docs','/trust','/demo'].map(p=>({url:base+p}));if(configured()){try{const {data}=await adminDb().rpc('public_records',{p_limit:50});return [...pages,...(data||[]).map((r:{id:string;updated_at:string})=>({url:base+'/claims/'+r.id,lastModified:r.updated_at}))]}catch{}}return pages}

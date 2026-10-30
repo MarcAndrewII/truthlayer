@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <section className="page"><h1>Record unavailable.</h1><p>This page does not exist or is not published.</p><Link className="btn" href="/claims">Browse public records</Link></section>}

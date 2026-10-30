@@ -1,0 +1,1 @@
+import {Directory} from '@/components/directory';export default function Page(){return <section className="page"><div className="eyebrow">The public record</div><h1>Evidence you can follow.</h1><p className="intro">Browse approved corrections, their sources, and how the record has changed. Sorted by latest activity.</p><Directory/></section>}
